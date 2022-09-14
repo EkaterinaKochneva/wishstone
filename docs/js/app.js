@@ -1,5 +1,6 @@
 window.onload = function () {
-		// Кнопки в шапке
+
+	// Кнопки в шапке
     $('.header-nav__icon').click(function () {		
 		let parent = $(this).parents('.header-nav__item');
         parent.toggleClass("active");
@@ -16,7 +17,6 @@ window.onload = function () {
 	});
 
 	// Слайдер выполненных работ
-
 	document.querySelectorAll('.portfolio-slide').forEach(n => {
 		const swiperPortfolioThumbs = new Swiper(n.querySelector('.portfolio-thumbs__swiper'), {
 			slidesPerView: 3,	
@@ -47,7 +47,6 @@ window.onload = function () {
 		});
 
 	});
-
 	const swiperPortfolioBig = new Swiper('.portfolio__slider-big', {
 		loop: true,
 		slidesPerView: 1,
@@ -64,22 +63,60 @@ window.onload = function () {
 		  },
 	});
 
-		// Аккардион 
+	// Слайдер товаров
 
-		$('.accordion__btn').click(function(){
-			if(!$(this).hasClass('active')){
-				$(this).parents('.accordion__wrapper').find('.accordion__btn').removeClass('active'); 
-				$(this).parents('.accordion__wrapper').find('.accordion__content').slideUp();
-				$(this).addClass('active');	
-				$(this).parent().next().children().slideDown();	
-				$(this).parent().next().addClass('active');
-					
-			} else {	
-				$(this).removeClass('active');	
-				$(this).parent().next().children().slideUp();
-				$(this).parent().next().removeClass('active');
+	document.querySelectorAll('.slider-block').forEach(n => {
+		const swiperNew = new Swiper(n.querySelector('.slider-block__swiper'), {
+			slidesPerView: 1,		
+			loop: true,			
+			breakpoints: {
+				991: {
+					slidesPerView: 4,
+					spaceBetween: 20,
+				},
+				767: {
+					slidesPerView: 2,
+					spaceBetween: 20,					
+				},
+			},			
+			navigation: {
+				hide: false,
+				nextEl: n.querySelector('.slider-block__button-next-js'),
+				prevEl: n.querySelector('.slider-block__button-prev-js'),
+			  },
+	
+		  });
+	});
+
+	// Аккардион 
+	$('.accordion__btn').click(function(){
+		if(!$(this).hasClass('active')){
+			$(this).parents('.accordion__wrapper').find('.accordion__btn').removeClass('active'); 
+			$(this).parents('.accordion__wrapper').find('.accordion__content').slideUp();
+			$(this).addClass('active');	
+			$(this).parent().next().children().slideDown();	
+			$(this).parent().next().addClass('active');
 				
-			}
-		});
+		} else {	
+			$(this).removeClass('active');	
+			$(this).parent().next().children().slideUp();
+			$(this).parent().next().removeClass('active');
+			
+		}
+	});
+
+	// Tabs
+	$('.card-tabs__caption').on('click', '.card-tabs__btn:not(.active)', function (e) {
+		$(this)
+			.addClass('active').siblings().removeClass('active')
+			.closest('.card-tabs').find('.card-tabs__content').hide().removeClass('active')
+			.eq($(this).index()).show().addClass('active');
+
+	});
+	$('.card-tabs__btn-mob').change(function() {
+		$(this).closest('.card-tabs').find('.card-tabs__content').hide().removeClass('active')
+		.eq($(this).val()-1).show().addClass('active');
+
+	});
 
 }
