@@ -84,8 +84,64 @@ window.onload = function () {
 				nextEl: n.querySelector('.slider-block__button-next-js'),
 				prevEl: n.querySelector('.slider-block__button-prev-js'),
 			  },
+
 	
 		  });
+	});
+
+	// Слайдер выполненных работ (широкий) 
+
+	document.querySelectorAll('.our-work-slider').forEach(n => {
+		const swiperNew = new Swiper(n.querySelector('.our-work-slider__swiper'), {
+			slidesPerView: 1.2,		
+			spaceBetween: 20,	
+			loop: true,			
+			centeredSlides: true,	
+			
+			breakpoints: {
+				1500: {
+					slidesPerView: 1.9,	
+				},
+				1300: {
+					slidesPerView: 1.7,	
+				},
+				1100: {
+					slidesPerView: 1.5,	
+				},
+				991: {
+					slidesPerView: 1.6,	
+				},
+				767: {
+					slidesPerView: 1.3,					
+				},
+			},	
+			
+			navigation: {
+				hide: false,
+				nextEl: n.querySelector('.our-work-slider__button-next'),
+				prevEl: n.querySelector('.our-work-slider__button-prev'),
+			  },
+			  pagination: {
+				el: n.querySelector('.our-work-slider__pagination'),
+				clickable: true,
+				},
+	
+		  });
+	});
+
+	// Слайдер отзывов
+
+	const reviewsSlider = new Swiper('.reviews__slider', {
+		loop: true,
+		slidesPerView: 1,
+		draggable: true,
+		autoHeight: true,		
+
+		navigation: {
+			nextEl: '.reviews__button-next',
+			prevEl: '.reviews__button-prev',
+		  },
+
 	});
 
 	// Аккардион 
