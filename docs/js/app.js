@@ -175,4 +175,36 @@ window.onload = function () {
 
 	});
 
+	// Слайдер с табами
+
+	const tabsSlider = new Swiper('.content-swiper__slider', {
+		slidesPerView: 1,
+		simulateTouch: false,
+		autoplayDisableOnInteraction: false,
+		autoHeight: true,	
+	});
+
+	$('.tabs-swiper__item').click(function(){
+		if(!$(this).hasClass('active')){
+			$(this).parents('.tabs-swiper').find('.tabs-swiper__item').removeClass('active'); 
+			tabsSlider.slideTo($(this).index());
+			$(this).addClass('active');					
+		} 
+	});
+
+	// Прокрутка наверх страницы
+	$(window).on('scroll', function () {
+		if ($(this).scrollTop() > 100) {
+		$('.button-up').addClass('scroll');
+		} else {
+		$('.button-up').removeClass('scroll');
+		}
+		});
+		$('.button-up').click(function(){
+		$('body,html').animate({
+		scrollTop: 0
+		}, 500);
+		return false;
+	});
+
 }
