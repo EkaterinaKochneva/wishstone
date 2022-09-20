@@ -9,6 +9,7 @@
 
 	<link rel="stylesheet" href="libs/fancybox.min.css">
 	<link rel="stylesheet" href="libs/swiper-bundle.min.css">
+	<link rel="stylesheet" href="libs/ion.rangeSlider.min.css">
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
     <body>
@@ -167,33 +168,53 @@
                         <em><span>Цветопередача!</span> Уважаемые клиенты, обращаем Ваше внимание, цвета на сайте и цвета в реальности могут отличаться. Перед покупкой рекомендуем Вам ознакомится с образцами продукции в нашем офисе или на производстве.</em>
                     </div>
                     <div class="catalog__tabs tabs-catalog">
-                        <a class="tabs-catalog__item" href="">
-                            Вибропрессованная тротуарная плитка
-                        </a>
+                        <div class="row g-3">
+                            <div class="col-sm-6 col-lg-3">
+                                <a class="tabs-catalog__item" href="#">
+                                    <div class="tabs-catalog__title">
+                                        Вибропрессованная тротуарная плитка
+                                    </div>
+                                    <div class="tabs-catalog__img">
+                                        <picture>
+                                            <img src="img/catalog/vibropressovannaya.jpg" alt="Вибропрессованная тротуарная плитка">
+                                        </picture>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>  
                     </div>
+                    <div class="catalog__search search-catalog">
+                        <form>
+                            <div class="search-catalog__input-wrap">
+                                <input class="search-catalog__input" name="text" type="text" placeholder="Поиск" autocomplete="off">
+                            </div>
+                            <button class="search-catalog__btn">Найти 
+                            </button>
+                        </form>
+                    </div>
+                    <button class="catalog__filter-btn filter-btn-js" type="button" data-collapsed-enabled="Фильтр" data-collapsed-disabled="Свернуть">
+                        Фильтр
+                    </button>
                     <div class="catalog__row">
                         <aside class="catalog__sidebar sidebar">                            
                             <form class="sidebar__filter catalog-filter">
-                                <button class="catalog-filter__close-btn catalog-filter__close-btn--js" type="button">
-                                    <svg class="catalog-filter__close-btn-icon icon-svg">
-                                        <use xlink:href="img/icons/sprite-icons.svg#close"></use>
-                                    </svg>
+                                <button class="catalog-filter__close-btn catalog-filter__close-btn--js" type="button">                                    
                                 </button>
                                 <fieldset class="catalog-filter__item">
                                     <legend class="catalog-filter__title">
                                         Цена                                            
                                     </legend>
                                     <div class="catalog-filter__body">
-                                        <div class="catalog-filter__price filter-price range-wrap">
+                                        <div class="catalog-filter__price filter-price range-wrap">                                            
+                                            <input class="range-slider-js" type="text" data-min="0" data-max="1440"/>
                                             <div class="filter-price__values">													
                                                 <div class="filter-price__value">
                                                     <input class="filter-price__input input_from " type="text" value=""/>
-                                                </div>                                                
+                                                </div>                                       
                                                 <div class="filter-price__value">
                                                     <input class="filter-price__input input_to " type="text" value=""/>
                                                 </div>													
                                             </div>
-                                            <input class="range-slider-js" type="text" data-min="0" data-max="1440"/>
                                         </div>
                                     </div>    
                                 </fieldset>
@@ -337,96 +358,345 @@
                                         <label class="catalog-filter__input custom-checkbox">
                                             <input class="custom-checkbox__input" value="Чёрный" name="checkbox" type="checkbox">
                                             <span class="custom-checkbox__text">Чёрный</span>
-                                        </label>
-                                        
-                                    </div>    
+                                        </label>                                        
+                                    </div>
+                                    <button type="button" class="catalog-filter__collaps-btn collaps-btn" data-collapsed-enabled="Показать все" data-collapsed-disabled="Свернуть">Показать все</button>    
                                 </fieldset>
                             </form>                            
                         </aside>
                         <div class="catalog__body products-catalog">
                             <div class="products-catalog__wrap">
-                                <div class="row g-3 g-lg-5">
-                                    <div class="col-6 col-md-4">
-                                        <a class="catalog-main__item main-card" href="#">
-                                            <div class="main-card__img">
+                                <div class="row g-3 g-lg-4">
+                                    <div class="col-6 col-md-4 col-xl-3">
+                                        <a class="products-catalog__item product-item" href="#">
+                                            <div class="product-item__img">
                                                 <picture>
                                                     <img src="img/main/catalog/plitka-1.jpg" alt="Плитка 1П4 Серая">
                                                 </picture>
                                             </div>
-                                            <div class="main-card__desc">
-                                                <div class="main-card__title">Плитка 1П4 Серая</div>
-                                                <div class="main-card__price">580 ₽/м²</div>
+                                            <div class="product-item__desc">
+                                                <div class="product-item__title">Плитка 1П4 Серая</div>
+                                                <div class="product-item__info">200х100х40 мм</div>
+                                                <div class="product-item__info">50 шт/м²</div>
                                             </div>
+                                            <div class="product-item__price">580 руб.<span> / м²</span></div>
                                         </a>
                                     </div>
-                                    <div class="col-6 col-md-4">
-                                        <a class="catalog-main__item main-card" href="#">
-                                            <div class="main-card__img">
+                                    <div class="col-6 col-md-4 col-xl-3">
+                                        <a class="products-catalog__item product-item" href="#">
+                                            <div class="product-item__img">
                                                 <picture>
                                                     <img src="img/main/catalog/plitka-2.jpg" alt="Плитка 1П6 Серая">
                                                 </picture>
                                             </div>
-                                            <div class="main-card__desc">
-                                                <div class="main-card__title">Плитка 1П6 Серая</div>
-                                                <div class="main-card__price">690 ₽/м²</div>
+                                            <div class="product-item__desc">
+                                                <div class="product-item__title">Плитка 1П6 Серая</div>
+                                                <div class="product-item__info">200х100х40 мм</div>
+                                                <div class="product-item__info">50 шт/м²</div>  
                                             </div>
+                                            <div class="product-item__price">690 руб.<span> / м²</span></div>
                                         </a>
                                     </div>
-                                    <div class="col-6 col-md-4">
-                                        <a class="catalog-main__item main-card" href="#">
-                                            <div class="main-card__img">
+                                    <div class="col-6 col-md-4 col-xl-3">
+                                        <a class="products-catalog__item product-item" href="#">
+                                            <div class="product-item__img">
                                                 <picture>
                                                     <img src="img/main/catalog/plitka-3.jpg" alt="Плитка Ландхаус Серая">
                                                 </picture>
                                             </div>
-                                            <div class="main-card__desc">
-                                                <div class="main-card__title">Плитка Ландхаус Серая</div>
-                                                <div class="main-card__price">710 ₽/м²</div>
+                                            <div class="product-item__desc">
+                                                <div class="product-item__title">Плитка Ландхаус Серая</div>
+                                                <div class="product-item__info">240х160х60, 160х160х60, 80х160х60, мм</div>
+                                                <div class="product-item__info">37.5 шт/м²</div>
                                             </div>
+                                            <div class="product-item__price">710 руб.<span> / м²</span></div>
                                         </a>
                                     </div>
-                                    <div class="col-6 col-md-4">
-                                        <a class="catalog-main__item main-card" href="#">
-                                            <div class="main-card__img">
+                                    <div class="col-6 col-md-4 col-xl-3">
+                                        <a class="products-catalog__item product-item" href="#">
+                                            <div class="product-item__img">
                                                 <picture>
                                                     <img src="img/main/catalog/plitka-4.jpg" alt="Плитка Плита Серая">
                                                 </picture>
                                             </div>
-                                            <div class="main-card__desc">
-                                                <div class="main-card__title">Плитка Плита Серая</div>
-                                                <div class="main-card__price">730 ₽/м²</div>
+                                            <div class="product-item__desc">
+                                                <div class="product-item__title">Плитка Плита Серая</div>
+                                                <div class="product-item__info">500х300х60 мм</div>
+                                                <div class="product-item__info">6 шт/м²</div>
                                             </div>
+                                            <div class="product-item__price">730 руб.<span> / м²</span></div>
                                         </a>
                                     </div>
-                                    <div class="col-6 col-md-4">
-                                        <a class="catalog-main__item main-card" href="#">
-                                            <div class="main-card__img">
+                                    <div class="col-6 col-md-4 col-xl-3">
+                                        <a class="products-catalog__item product-item" href="#">
+                                            <div class="product-item__img">
                                                 <picture>
                                                     <img src="img/main/catalog/plitka-5.jpg" alt="Плитка Квадрат Серая">
                                                 </picture>
                                             </div>
-                                            <div class="main-card__desc">
-                                                <div class="main-card__title">Плитка Квадрат Серая</div>
-                                                <div class="main-card__price">720 ₽/м²</div>
+                                            <div class="product-item__desc">
+                                                <div class="product-item__title">Плитка Квадрат Серая</div>
+                                                <div class="product-item__info">150х150х60 мм</div>
+                                                <div class="product-item__info">44 шт/м²</div>
                                             </div>
+                                            <div class="product-item__price">720 руб.<span> / м²</span></div>
                                         </a>
                                     </div>
-                                    <div class="col-6 col-md-4">
-                                        <a class="catalog-main__item main-card" href="#">
-                                            <div class="main-card__img">
+                                    <div class="col-6 col-md-4 col-xl-3">
+                                        <a class="products-catalog__item product-item" href="#">
+                                            <div class="product-item__img">
                                                 <picture>
                                                     <img src="img/main/catalog/plitka-6.jpg" alt="Плитка Ландхаус Серая">
                                                 </picture>
                                             </div>
-                                            <div class="main-card__desc">
-                                                <div class="main-card__title">Плитка 1П8 Серая</div>
-                                                <div class="main-card__price">860 ₽/м²</div>
+                                            <div class="product-item__desc">
+                                                <div class="product-item__title">Плитка 1П8 Серая</div>
+                                                <div class="product-item__info">200х100х80 мм</div>
+                                                <div class="product-item__info">50 шт/м²</div>
                                             </div>
+                                            <div class="product-item__price">860 руб.<span> / м²</span></div>
+                                        </a>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-xl-3">
+                                        <a class="products-catalog__item product-item" href="#">
+                                            <div class="product-item__img">
+                                                <picture>
+                                                    <img src="img/main/catalog/plitka-1.jpg" alt="Плитка 1П4 Серая">
+                                                </picture>
+                                            </div>
+                                            <div class="product-item__desc">
+                                                <div class="product-item__title">Плитка 1П4 Серая</div>
+                                                <div class="product-item__info">200х100х40 мм</div>
+                                                <div class="product-item__info">50 шт/м²</div>
+                                            </div>
+                                            <div class="product-item__price">580 руб.<span> / м²</span></div>
+                                        </a>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-xl-3">
+                                        <a class="products-catalog__item product-item" href="#">
+                                            <div class="product-item__img">
+                                                <picture>
+                                                    <img src="img/main/catalog/plitka-2.jpg" alt="Плитка 1П6 Серая">
+                                                </picture>
+                                            </div>
+                                            <div class="product-item__desc">
+                                                <div class="product-item__title">Плитка 1П6 Серая</div>
+                                                <div class="product-item__info">200х100х40 мм</div>
+                                                <div class="product-item__info">50 шт/м²</div>  
+                                            </div>
+                                            <div class="product-item__price">690 руб.<span> / м²</span></div>
+                                        </a>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-xl-3">
+                                        <a class="products-catalog__item product-item" href="#">
+                                            <div class="product-item__img">
+                                                <picture>
+                                                    <img src="img/main/catalog/plitka-3.jpg" alt="Плитка Ландхаус Серая">
+                                                </picture>
+                                            </div>
+                                            <div class="product-item__desc">
+                                                <div class="product-item__title">Плитка Ландхаус Серая</div>
+                                                <div class="product-item__info">240х160х60, 160х160х60, 80х160х60, мм</div>
+                                                <div class="product-item__info">37.5 шт/м²</div>
+                                            </div>
+                                            <div class="product-item__price">710 руб.<span> / м²</span></div>
+                                        </a>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-xl-3">
+                                        <a class="products-catalog__item product-item" href="#">
+                                            <div class="product-item__img">
+                                                <picture>
+                                                    <img src="img/main/catalog/plitka-4.jpg" alt="Плитка Плита Серая">
+                                                </picture>
+                                            </div>
+                                            <div class="product-item__desc">
+                                                <div class="product-item__title">Плитка Плита Серая</div>
+                                                <div class="product-item__info">500х300х60 мм</div>
+                                                <div class="product-item__info">6 шт/м²</div>
+                                            </div>
+                                            <div class="product-item__price">730 руб.<span> / м²</span></div>
+                                        </a>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-xl-3">
+                                        <a class="products-catalog__item product-item" href="#">
+                                            <div class="product-item__img">
+                                                <picture>
+                                                    <img src="img/main/catalog/plitka-5.jpg" alt="Плитка Квадрат Серая">
+                                                </picture>
+                                            </div>
+                                            <div class="product-item__desc">
+                                                <div class="product-item__title">Плитка Квадрат Серая</div>
+                                                <div class="product-item__info">150х150х60 мм</div>
+                                                <div class="product-item__info">44 шт/м²</div>
+                                            </div>
+                                            <div class="product-item__price">720 руб.<span> / м²</span></div>
+                                        </a>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-xl-3">
+                                        <a class="products-catalog__item product-item" href="#">
+                                            <div class="product-item__img">
+                                                <picture>
+                                                    <img src="img/main/catalog/plitka-6.jpg" alt="Плитка Ландхаус Серая">
+                                                </picture>
+                                            </div>
+                                            <div class="product-item__desc">
+                                                <div class="product-item__title">Плитка 1П8 Серая</div>
+                                                <div class="product-item__info">200х100х80 мм</div>
+                                                <div class="product-item__info">50 шт/м²</div>
+                                            </div>
+                                            <div class="product-item__price">860 руб.<span> / м²</span></div>
                                         </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="catalog__more-btn-block">
+                        <button class="catalog__more-btn main-btn" type="button">Загрузить еще</button>
+                    </div>
+                    <div class="catalog__content">
+                        <div class="catalog__title">
+                            <h2>Тротуарная плитка от завода-производителя Wishstone</h2>
+                        </div>
+                        <p>С некоторых пор повсеместно используется покрытие, которое отличается свойствами, привлекательным дизайном. Так с первых дней появления на строительном рынке заявила о себе тротуарная плитка, её используют для всевозможных целей благодаря целому ряду преимуществ. Компания Wishstone занимает лидерские позиции в сфере по производству отделочного материала с различными параметрами, главные отличия – высокое качество и широкий выбор.</p>
+                        <div class="catalog__title">
+                            <h2>Область применения</h2>
+                        </div>
+                        <p>Любые виды тротуарных плиток могут использоваться для покрытия разных поверхностей на территории коммерческих, частных объектов. Область применения:</p>
+                        <ul class="cheked-list cheked-list--circul mb-5">
+                            <li>придомовой участок частного жилья, коттеджей;</li>
+                            <li>зона отдыха отеля, кафе, ресторана;</li>
+                            <li>парковка;</li>
+                            <li>тротуары;</li>
+                            <li>дорожное полотно;</li>
+                            <li>садовые дорожки;</li>
+                            <li>пешеходные улицы;</li>
+                            <li>зона перед входом в магазины;</li>
+                            <li>площади;</li>
+                            <li>подходы к любым другим зданиям.</li>
+                        </ul>
+                        <div class="row gy-4  mb-5">
+                            <div class="col-xl-4">
+                                <img class="center-img" src="img/catalog/trotuarnaya-plitka-2.jpg" alt="Тротуарная плитка во дворе">
+                            </div>
+                            <div class="col-xl-4">
+                                <img class="center-img" src="img/catalog/trotuarnaya-plitka-1.jpg" alt="Разноцветная тротуарная плитка">
+                            </div>
+                            <div class="col-xl-4">
+                                <img class="center-img" src="img/catalog/trotuarnaya-plitka-3.jpg" alt="Дорожка из тротуарной плитки во дворе">
+                            </div>
+                        </div>
+                        <div class="catalog__title">
+                            <h2>Преимущества тротуарной плитки</h2>
+                        </div>
+                        <p>Если купить продукцию напрямую от завода-изготовителя, можно получить целый ряд бонусов. Прежде всего, отмечается:</p>
+                        <ul class="cheked-list mb-5">
+                            <li>прочность покрытия: отличием тротуарной плитки от других материалов является высокая степень устойчивости к механическому воздействию;</li>
+                            <li>длительный период службы: при соблюдении техники мощения вероятность разрушения дорожного полотна низкая, к тому же покрытие выдерживает неблагоприятные условия;</li>
+                            <li>привлекательность: производитель Wishstone предлагает плитку оригинального, строгого дизайна (примером может служить форма Новый Город, Квадрат, Брусчатка, Широкоформатные изделия), она универсальная, подойдёт под любой ландшафт и дизайнерское решение, в ассортименте есть цвета от белого до чёрного, а в промежутке между ними – жёлтый, зелёный, коричневый, синий и др.;</li>
+                            <li>несложная техника монтажа: при желании можно выполнить работы самостоятельно, однако мастера с опытом производят укладку быстрее и более качественно, что гарантирует длительный период службы;</li>
+                            <li>низкий уровень водопоглощения от 3 до 6%.</li>
+                        </ul>
+                        <div class="info-block">
+                            При покупке тротуарной плитки рекомендуем заранее подумать о запасе, который обычно составляет 5-7% об общего объема. Данный запас необходим на случай подрезки материала, способа укладки (при диагональной укладке отходов больше, чем при параллельной), а также бой. Также обращаем Ваше внимание, что согласно п.8.11 ГОСТ. При приемке потребителем бетонных тротуарных плит на объекте, производитель не несет ответственности за дефекты (потертости, трещины, сколы) в количестве до 3% от числа изделий.
+                        </div>
+                        <div class="catalog__title">
+                            <h2>Обзор видов тротуарной плитки</h2>
+                        </div>
+                        <p>Основу тротуарной плитки составляет цементно-песчаная смесь и вспомогательные компоненты:</p>
+                        <ul class="cheked-list cheked-list--circul mb-5">
+                            <li>гранитный щебень;</li>
+                            <li>пигмент для бетонной смеси;</li>
+                            <li>пластификатор.</li>
+                        </ul>
+                        <p>При производстве высокопрочной продукции (клинкерной плитки) состав меняется, добавляется глина. По технологии изготовления плитка делится на 2 группы:</p>
+                        <ol class="circul-numbered-list mb-5 mt-5">
+                            <li><a href="#"><b>Вибропрессованная.</b></a> Весомое отличие – шероховатая поверхность. Для вибропрессованной продукции характерны матовые и приглушённые оттенки. Товары этой группы создаются из полусухого раствора. Благодаря отсутствию излишка влаги увеличивается период службы изделий, они становятся более качественными. Смеси укладывается в формы на станине, вся конструкция начинает вибрировать. Одновременно на неё давит пуансон. Это повторяется до тех пор, пока смесь полностью не уплотнится.</li>
+                            <li><a href="#"><b>Вибролитая.</b></a> Плитка гладкая, с блестящей поверхностью. Техника производства отличается от той, что выше: раствор разливается по формам, установленным на станине, они подвергаются вибрации, а после уплотнения проходят тепловую обработку – на 48 часов ставятся в печь.</li>
+                        </ol>
+                        <div class="row gy-4 mb-5">
+                            <div class="col-md-6">
+                                <img class="center-img" src="img/catalog/trotuarnaya-plitka-4.jpg" alt="Серая тротуарная плитка">
+                            </div>
+                            <div class="col-md-6">
+                                <img class="center-img" src="img/catalog/trotuarnaya-plitka-5.jpg" alt="Красная тротуарная плитка">
+                            </div>
+                        </div>
+                        <div class="side-border-block">
+                            Плитка производится в разных исполнениях, характеризуется размерами: толщина меняется от 30 до 100 мм, другие популярные габариты – 150х150 мм, 200х200 мм, 300х300 мм и др.
+                        </div>
+                        <div class="catalog__title">
+                            <h2>Процесс укладки – поэтапно</h2>
+                        </div>
+                        <p>Можно заказать монтаж тротуарной плитки и бордюров в Москве. Стоимость уточняется индивидуально, что позволяет учесть вид, размер товара, состав материала. Существуют техники: на бетонное основание, песок или сложносоставное основание (с армировкой, геотекстилем, уплотнённым грунтом и т. д.).</p>
+                        <p>Как выполняется укладка по одной из простых схем.</p>
+                        <div class="icons-list">
+                            <div class="icons-list__item">
+                                <div class="icons-list__num">1</div>
+                                <div class="icons-list__text">
+                                    Уплотняется поверхностный слой грунта после удаления дёрна.
+                                </div>
+                                <div class="icons-list__img">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 100.354 100.352" style="enable-background:new 0 0 100.354 100.352;" xml:space="preserve">
+                                        <path d="M69.181,72.284c0.001-0.414-0.168-0.81-0.469-1.094L54.591,57.837l0.189-44.994c0.078-0.181,0.122-0.38,0.123-0.59  c0.01-2.837-2.604-5.158-5.828-5.173c-0.008,0-0.016,0-0.024,0c-3.213,0-5.834,2.294-5.848,5.124  c-0.001,0.199,0.038,0.394,0.111,0.575l-0.189,45.013L28.888,71.024c-0.304,0.282-0.477,0.677-0.479,1.092l-0.037,8.005l0,0l0,0  l-0.05,11.757c-0.003,0.828,0.665,1.503,1.494,1.506c0.002,0,0.004,0,0.006,0c0.826,0,1.497-0.667,1.5-1.494l0.044-10.257  l4.561,0.02l-0.041,10.263c-0.003,0.828,0.666,1.502,1.494,1.506c0.002,0,0.004,0,0.006,0c0.826,0,1.497-0.667,1.5-1.494  l0.041-10.262l4.55,0.02l-0.044,10.258c-0.003,0.828,0.665,1.503,1.494,1.506c0.002,0,0.004,0,0.006,0  c0.826,0,1.497-0.667,1.5-1.494l0.044-10.258l4.557,0.02L50.99,91.975c-0.003,0.828,0.665,1.503,1.494,1.506  c0.002,0,0.004,0,0.006,0c0.826,0,1.497-0.667,1.5-1.494l0.044-10.256l4.559,0.02l-0.055,10.252  c-0.004,0.829,0.664,1.504,1.492,1.508c0.003,0,0.006,0,0.008,0c0.825,0,1.496-0.666,1.5-1.492l0.055-10.255l4.557,0.02  l-0.052,10.253c-0.004,0.829,0.664,1.503,1.492,1.508c0.003,0,0.005,0,0.008,0c0.825,0,1.496-0.667,1.5-1.492l0.06-11.754  c0-0.001,0-0.001,0-0.002s0-0.001,0-0.002L69.181,72.284z M31.405,72.778l14.237-13.232c0.004-0.004,0.005-0.009,0.009-0.012  c0.136-0.129,0.247-0.284,0.328-0.456c0.004-0.008,0.009-0.016,0.013-0.024c0.071-0.16,0.111-0.336,0.121-0.521  c0.001-0.016,0.004-0.03,0.005-0.046c0-0.011,0.003-0.022,0.003-0.033l0.194-46.236c0-0.141-0.019-0.28-0.056-0.413  c0.268-0.97,1.438-1.724,2.789-1.724c0.004,0,0.009,0,0.014,0c1.375,0.006,2.523,0.751,2.785,1.732  c-0.042,0.136-0.064,0.28-0.064,0.429l-0.194,46.232c0,0.011,0.003,0.022,0.003,0.033c0,0.016,0.004,0.031,0.005,0.047  c0.009,0.184,0.047,0.36,0.117,0.521c0.004,0.008,0.009,0.016,0.013,0.024c0.079,0.173,0.188,0.329,0.324,0.459  c0.004,0.003,0.005,0.008,0.008,0.012l14.122,13.353l-0.017,5.863l-13.578-0.059c-0.013,0-0.025-0.004-0.038-0.004  c-0.002,0-0.004,0-0.006,0c-0.012,0-0.024,0.003-0.036,0.004l-7.475-0.033c-0.013,0-0.026-0.004-0.039-0.004  c-0.002,0-0.004,0-0.006,0c-0.013,0-0.025,0.003-0.037,0.004l-13.567-0.059L31.405,72.778z"/>
+                                        </svg>
+                                </div>
+                            </div>
+                            <div class="icons-list__item">
+                                <div class="icons-list__num">2</div>
+                                <div class="icons-list__text">
+                                    Укладывается слой песка (щебня).
+                                </div>
+                                <div class="icons-list__img">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 100.25 100.25" style="enable-background:new 0 0 100.25 100.25;" xml:space="preserve">
+                                        <path d="M28.59,84.258l-15.28-0.109L16.976,64.9c0.009-0.047,0.008-0.094,0.012-0.141c0.004-0.043,0.014-0.084,0.014-0.128v-0.032  c0-0.001,0-0.001,0-0.002l0.004-0.466c0.008-0.967,0.139-1.941,0.276-2.972c0.338-2.521,0.688-5.128-0.782-7.72l-3.019-5.32  c-0.139-0.665-0.207-1.343-0.202-2.016l0.174-20.051c0.004-0.468,0.605-0.983,1.462-0.983c0.006,0,0.012,0,0.018,0l0.888,0.009  c0.434,0.004,0.847,0.146,1.132,0.389c0.124,0.106,0.331,0.326,0.329,0.614v0.003c0,0.003,0.001,0.007,0.001,0.01l-0.085,9.882  c-0.007,0.828,0.659,1.505,1.487,1.513c0.004,0,0.009,0,0.013,0c0.822,0,1.493-0.663,1.5-1.487l0.085-9.89  c0-0.003-0.001-0.006-0.001-0.01l0.101-11.454c0.002-0.29,0.214-0.507,0.34-0.611c0.29-0.239,0.734-0.374,1.141-0.37l0.883,0.008  c0.436,0.004,0.85,0.146,1.135,0.39c0.124,0.106,0.33,0.326,0.33,0.615l-0.153,16.707c-0.008,0.828,0.658,1.506,1.486,1.514  c0.005,0,0.009,0,0.014,0c0.822,0,1.492-0.663,1.5-1.486l0.153-16.699c0-0.001,0-0.002,0-0.004c0-0.001,0-0.003,0-0.004l0.052-5.73  c0.002-0.29,0.214-0.507,0.339-0.611c0.29-0.239,0.658-0.389,1.146-0.37l0.875,0.006c0.869,0.009,1.471,0.541,1.467,1.011  l-0.038,4.507c0,0.005-0.002,0.01-0.002,0.015l-0.163,17.91c-0.008,0.829,0.658,1.506,1.486,1.514c0.005,0,0.01,0,0.014,0  c0.822,0,1.492-0.663,1.5-1.486l0.152-16.679c0-0.008,0.002-0.015,0.002-0.022v-0.001c0.002-0.238,0.144-0.426,0.262-0.542  c0.285-0.28,0.725-0.437,1.223-0.438l0.878,0.006c0.436,0.004,0.849,0.146,1.134,0.39c0.125,0.106,0.333,0.328,0.33,0.621  L37.725,31.34v0.001l-0.048,4.326c-0.009,0.829,0.655,1.507,1.483,1.517c0.006,0,0.012,0,0.017,0c0.821,0,1.491-0.661,1.5-1.483  l0.03-2.712c0-0.014,0.004-0.026,0.004-0.04l0.025-2.912l3.423,0.025c0.5,0.003,0.92,0.438,0.916,0.947l-0.034,4.877  c-0.006,0.829,0.661,1.505,1.489,1.511c0.004,0,0.008,0,0.011,0c0.823,0,1.494-0.665,1.5-1.489l0.034-4.877  c0.016-2.172-1.731-3.953-3.895-3.969l-3.418-0.025l0.107-12.201c0.01-1.102-0.493-2.169-1.38-2.928  c-0.825-0.706-1.911-1.1-3.062-1.109l-0.874-0.006c-0.481,0.004-1.006,0.066-1.479,0.208l0.017-1.959  c0.018-2.2-1.974-4.011-4.442-4.036L28.772,5c-1.137-0.012-2.24,0.365-3.076,1.056c-0.9,0.742-1.422,1.8-1.431,2.9l-0.018,1.956  c-0.467-0.149-0.964-0.229-1.473-0.233l-0.883-0.008c-1.113-0.004-2.237,0.365-3.074,1.055c-0.902,0.743-1.424,1.801-1.433,2.901  l-0.067,7.687c-0.466-0.148-0.961-0.228-1.467-0.232l-0.888-0.009c-2.483-0.036-4.486,1.754-4.507,3.957l-0.174,20.055  c-0.007,0.98,0.103,1.963,0.325,2.921c0.032,0.141,0.085,0.276,0.156,0.402l3.13,5.516c0.972,1.714,0.715,3.627,0.419,5.842  c-0.145,1.077-0.294,2.191-0.304,3.346l-0.003,0.366l-3.978,20.884c-0.083,0.438,0.032,0.889,0.314,1.233s0.703,0.544,1.148,0.548  l17.08,0.123c0.004,0,0.007,0,0.011,0c0.823,0,1.494-0.665,1.5-1.489C30.085,84.94,29.418,84.264,28.59,84.258z"/>
+                                        <path d="M92.584,35.54l-0.623-0.628c-0.362-0.366-0.773-0.67-1.213-0.902l1.382-1.391c1.547-1.553,1.394-4.243-0.34-5.993  l-0.624-0.634c-0.906-0.912-2.113-1.436-3.311-1.436c-0.001,0-0.002,0-0.003,0c-1.028,0-1.976,0.383-2.669,1.079l-1.364,1.371  c-0.224-0.428-0.518-0.834-0.881-1.199l-0.623-0.632c-0.905-0.914-2.112-1.438-3.312-1.439c0,0-0.001,0-0.002,0  c-1.029,0-1.978,0.384-2.67,1.081L66.262,34.936c-0.224-0.431-0.518-0.84-0.882-1.209l-0.622-0.624  c-0.904-0.913-2.11-1.438-3.31-1.439c-0.001,0-0.003,0-0.004,0c-1.029,0-1.977,0.383-2.669,1.08l-9.221,9.268  c-0.841,0.846-1.555,1.811-2.121,2.868c-0.066,0.124-0.115,0.256-0.145,0.394l-1.221,5.689c-0.494,2.311-2.198,3.745-4.171,5.407  c-0.731,0.616-1.483,1.258-2.201,1.965l-17.901,11.5c-0.381,0.245-0.631,0.647-0.681,1.097c-0.05,0.449,0.106,0.897,0.424,1.219  l24.088,24.398c0.283,0.287,0.668,0.446,1.067,0.446c0.044,0,0.088-0.002,0.132-0.006c0.446-0.04,0.851-0.276,1.104-0.644  l12.014-17.472l0.258-0.258c0.811-0.815,1.497-1.703,2.16-2.562c1.364-1.765,2.542-3.29,4.43-3.789l6.103-1.61  c0.142-0.037,0.276-0.095,0.401-0.171c0.838-0.514,1.612-1.125,2.304-1.816l14.096-14.164c1.543-1.554,1.389-4.243-0.345-5.996  l-0.626-0.631c-0.361-0.365-0.771-0.667-1.209-0.899l5.411-5.438C94.473,39.985,94.32,37.295,92.584,35.54z M90.8,39.421  l-8.049,8.09c-0.003,0.003-0.006,0.003-0.009,0.006l-6.952,6.985c-0.584,0.587-0.582,1.537,0.005,2.121  c0.293,0.292,0.676,0.437,1.059,0.437c0.385,0,0.771-0.147,1.063-0.442l6.946-6.979c0.003-0.003,0.006-0.003,0.009-0.006  l0.003-0.003c0.158-0.159,0.379-0.192,0.536-0.192c0.001,0,0.001,0,0.001,0c0.399,0,0.84,0.206,1.181,0.549l0.625,0.63  c0.619,0.626,0.681,1.435,0.349,1.769L73.474,66.547c-0.473,0.473-0.999,0.897-1.567,1.263l-5.882,1.552  c-2.872,0.76-4.554,2.936-6.037,4.855c-0.635,0.821-1.234,1.597-1.911,2.277l-0.354,0.354c-0.005,0.005-0.007,0.012-0.012,0.018  c-0.058,0.06-0.114,0.121-0.163,0.192L46.486,93.147L24.973,71.356l16.453-10.57c0.092-0.059,0.174-0.128,0.249-0.202  c0.001-0.001,0.003-0.002,0.004-0.003c0.666-0.67,1.421-1.305,2.15-1.92c2.194-1.848,4.463-3.758,5.172-7.072l1.175-5.474  c0.411-0.73,0.917-1.399,1.505-1.99l9.221-9.268c0.161-0.162,0.383-0.195,0.542-0.195h0.001c0.398,0,0.84,0.206,1.185,0.554  l0.621,0.623c0.619,0.627,0.68,1.437,0.348,1.771c0,0-0.001,0.001-0.001,0.002l-6.301,6.331c-0.584,0.587-0.582,1.537,0.006,2.122  c0.292,0.291,0.675,0.437,1.058,0.437c0.385,0,0.771-0.147,1.063-0.442l7.412-7.448c0,0,0.001-0.001,0.001-0.002l11.622-11.679  c0.16-0.162,0.384-0.196,0.542-0.196h0.001c0.399,0,0.841,0.206,1.18,0.547l0.625,0.635c0.62,0.623,0.68,1.43,0.347,1.765v0.001  c-0.001,0.001-0.001,0.003-0.003,0.004L66.149,44.763c-0.584,0.587-0.582,1.537,0.006,2.122c0.292,0.291,0.675,0.437,1.058,0.437  c0.385,0,0.771-0.147,1.063-0.442l15.855-15.934c0.002-0.002,0.002-0.005,0.004-0.007l3.173-3.187  c0.161-0.162,0.385-0.196,0.544-0.196h0.001c0.399,0,0.842,0.206,1.18,0.546l0.622,0.632c0.62,0.626,0.682,1.435,0.349,1.769  l-3.174,3.193c0,0-0.001,0-0.001,0.001L70.971,49.634c-0.584,0.587-0.582,1.537,0.006,2.122c0.292,0.291,0.675,0.437,1.058,0.437  c0.385,0,0.771-0.147,1.063-0.442l15.006-15.081l0,0l0.003-0.002c0.16-0.16,0.382-0.194,0.54-0.194c0,0,0,0,0.001,0  c0.398,0,0.841,0.206,1.183,0.551l0.622,0.627C91.072,38.278,91.133,39.087,90.8,39.421z"/>
+                                        </svg>
+                                </div>
+                            </div>
+                            <div class="icons-list__item">
+                                <div class="icons-list__num">3</div>
+                                <div class="icons-list__text">
+                                    Выполняется цементная стяжка.
+                                </div>
+                                <div class="icons-list__img">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 100.75 100.75" style="enable-background:new 0 0 100.75 100.75;" xml:space="preserve">
+                                        <circle cx="28.804" cy="17.282" r="2.831"/>
+                                        <path d="M95.044,52.218L76.345,8.902c-0.237-0.549-0.778-0.905-1.377-0.905h-0.001c-0.6,0-1.141,0.357-1.377,0.908l-18.588,43.27  c-0.199,0.463-0.152,0.996,0.125,1.417s0.747,0.675,1.251,0.676l16.229,0.021c0.037,0.003,0.074,0.004,0.111,0.004l0.669,0.001  v11.804l-3.693-0.005c0,0-0.001,0-0.002,0c-0.828,0-1.499,0.67-1.5,1.498L68.16,91.393c-0.001,0.828,0.669,1.5,1.498,1.502  l10.622,0.018c0.001,0,0.002,0,0.003,0c0.397,0,0.778-0.158,1.06-0.438c0.281-0.281,0.44-0.663,0.44-1.061l0.024-23.806  c0.001-0.828-0.67-1.5-1.498-1.501l-3.921-0.005V54.297l17.278,0.017c0.001,0,0.001,0,0.002,0c0.505,0,0.976-0.254,1.253-0.675  C95.197,53.215,95.244,52.682,95.044,52.218z M78.783,89.909l-7.622-0.013l0.028-20.803l7.614,0.01L78.783,89.909z M76.386,51.295  V34.269c0-0.829-0.672-1.5-1.5-1.5s-1.5,0.671-1.5,1.5v17.023H72.95c-0.036-0.002-0.073-0.004-0.11-0.004L58.655,51.27L74.97,13.29  l16.414,38.021L76.386,51.295z"/>
+                                        <path d="M51.272,44.898H40.466c-2.992,0-5.425-2.433-5.425-5.424c0-2.319,1.203-7.1,2.366-11.724  c0.937-3.722,1.821-7.238,2.149-9.695c0.344-2.545-0.454-5.078-2.248-7.129c-2.1-2.402-5.278-3.836-8.502-3.836  c-3.23,0-6.413,1.436-8.512,3.841c-1.791,2.051-2.586,4.583-2.239,7.125c0.336,2.492,1.272,6.054,2.264,9.825  c1.203,4.574,2.446,9.303,2.446,11.594c0,2.991-2.434,5.424-5.425,5.424h-11c-0.829,0-1.5,0.671-1.5,1.5v12.955  c-0.001,0.025-0.007,0.048-0.007,0.073S4.839,59.475,4.84,59.5v31.658c0,0.829,0.671,1.5,1.5,1.5h44.931c0.829,0,1.5-0.671,1.5-1.5  V46.4C52.772,45.569,52.101,44.898,51.272,44.898z M17.341,47.898c4.646,0,8.425-3.779,8.425-8.424  c0-2.678-1.236-7.379-2.545-12.356c-0.925-3.518-1.881-7.155-2.193-9.466c-0.229-1.673,0.313-3.359,1.526-4.749  c1.515-1.735,3.911-2.813,6.252-2.813c2.336,0,4.729,1.077,6.244,2.811c1.215,1.39,1.76,3.078,1.533,4.755  c-0.306,2.291-1.21,5.886-2.085,9.363c-1.264,5.022-2.457,9.765-2.457,12.456c0,4.645,3.78,8.424,8.425,8.424h9.306v10.028H7.841  V47.899h9.5V47.898z M7.841,89.656v-28.73h41.931v28.73H7.841z"/>
+                                        </svg>
+                                </div>
+                            </div>
+                            <div class="icons-list__item">
+                                <div class="icons-list__num">4</div>
+                                <div class="icons-list__text">
+                                    Укладывается плитка.
+                                </div>
+                                <div class="icons-list__img">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 100.75 100.75" style="enable-background:new 0 0 100.75 100.75;" xml:space="preserve">
+                                        <path d="M86.516,62.917l-12.621-8.294c-0.689-0.453-1.622-0.263-2.078,0.43c-0.455,0.692-0.262,1.623,0.43,2.077l10.433,6.856  L38.929,79.524L7.724,58.878l17.839-6.492c0.778-0.283,1.181-1.144,0.896-1.923c-0.283-0.778-1.145-1.181-1.922-0.896l-20.66,7.519  c-0.754,0.274-1.15,1.091-0.915,1.85v8.914c0,0.175,0.036,0.34,0.091,0.496c0.01,0.475,0.244,0.937,0.67,1.219l34.174,22.61  c0.255,0.168,0.543,0.249,0.827,0.249c0.297,0,0.584-0.098,0.834-0.265l47.073-16.717c0.554-0.197,0.915-0.688,0.981-1.235  c0.083-0.186,0.131-0.391,0.131-0.608V64.39C87.742,63.655,87.213,63.046,86.516,62.917z M5.962,61.31l31.263,20.684v6.139  L5.962,67.449V61.31z M40.225,82.247l44.518-15.81v6.491l-44.518,15.81V82.247z"/>
+                                        <path d="M97.11,31.695c0-0.734-0.528-1.343-1.225-1.472L62.051,7.826c-0.027-0.018-0.057-0.028-0.084-0.044  c-0.046-0.026-0.091-0.052-0.14-0.073c-0.046-0.02-0.092-0.036-0.138-0.051c-0.045-0.015-0.089-0.029-0.135-0.039  c-0.05-0.011-0.1-0.018-0.151-0.024c-0.045-0.005-0.09-0.011-0.136-0.012c-0.052-0.001-0.103,0.002-0.155,0.006  c-0.045,0.003-0.09,0.007-0.136,0.014c-0.053,0.009-0.105,0.023-0.157,0.038c-0.031,0.009-0.062,0.012-0.093,0.022L13.258,24.372  c-0.767,0.27-1.173,1.1-0.928,1.869v8.902c0,0.17,0.034,0.331,0.087,0.483c0.007,0.479,0.242,0.947,0.671,1.231l34.168,22.618  c0.255,0.168,0.542,0.249,0.827,0.249c0.298,0,0.586-0.098,0.836-0.267l47.074-16.708c0.552-0.196,0.911-0.683,0.98-1.227  c0.086-0.189,0.137-0.398,0.137-0.619V31.695z M61.018,10.74l31.039,20.547L48.288,46.821l-31.165-20.63L61.018,10.74z   M15.33,28.602l31.254,20.689v6.14L15.33,34.742V28.602z M49.584,49.544L94.11,33.741v6.491L49.584,56.036V49.544z"/>
+                                        </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row gy-4 mt-5 mb-5">
+                            <div class="col-lg-6">
+                                <div class="wide-img" style="height: 100%;">
+                                    <img src="img/catalog/trotuarnaya-plitka-6.jpg" alt="Укладка тротуарной плитки">
+                                </div>                                
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="wide-img mb-4"><img src="img/catalog/trotuarnaya-plitka-7.jpg" alt="Укладка тротуарной плитки на песок"></div>
+                                <div class="wide-img"><img src="img/catalog/trotuarnaya-plitka-8.jpg" alt="Укладка разноцветной тротуарной плитки"></div>                              
+                                
+                            </div>
+                        </div>
+                        <div class="catalog__title">
+                            <h2>О доставке</h2>
+                        </div>
+                        <p>Если окончательно сделан выбор – будет приобретаться тротуарная плитка, цена уточняется у менеджера, на сайте указана ориентировочная стоимость доставки. Компания транспортирует товар до места выполнения строительства или на другой объект по заказу клиента.</p>
+                        <p>Предлагается вариант доставки с разгрузкой и без разгрузки. Учитывается грузоподъёмность транспорта. При расчёте стоимости доставки играет роль расстояние до конечного пункта. От клиента требуется лишь подготовить подъездные пути к месту выгрузки тротуарной плитки.</p>
                     </div>
                 </div>
             </main>
@@ -520,6 +790,7 @@
 <script src="libs/jquery.min.js"></script>
 <script src="libs/fancybox.min.js"></script>
 <script src="libs/swiper-bundle.min.js"></script>
+<script src="libs/ion.rangeSlider.min.js"></script>
 <script src="js/app.js"></script> 
         </div>  
         <script src="js/app.min.js"></script>    
