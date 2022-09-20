@@ -287,13 +287,14 @@ window.onload = function () {
 
 	// Раскрытие фильтра в каталоге для моб
 	$('.filter-btn-js').on('click', function () {
+		$('.catalog__sidebar').fadeToggle();
         $(this).toggleClass('collapsed');
         if($(this).hasClass('collapsed')) {
             $(this).text($(this).data('collapsed-disabled'));
         }else {
             $(this).text($(this).data('collapsed-enabled'));
         }
-		$('.catalog__sidebar').slideToggle();
+		
     });
 
 }
