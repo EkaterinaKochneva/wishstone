@@ -7,10 +7,10 @@
 	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="stylesheet" href="libs/fancybox.min.css">
-	<link rel="stylesheet" href="libs/swiper-bundle.min.css">
-	<link rel="stylesheet" href="libs/ion.rangeSlider.min.css">
-	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="libs/fancybox.min.css?_v=20220921101423">
+	<link rel="stylesheet" href="libs/swiper-bundle.min.css?_v=20220921101423">
+	<link rel="stylesheet" href="libs/ion.rangeSlider.min.css?_v=20220921101423">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220921101423">
 </head>
     <body>
         <div class="wrapper">
@@ -21,7 +21,7 @@
                 <div class="top-header__logo-col">
                     <div class="top-header__logo logo-header">
                         <a class="logo-header__link" href="/">
-                            <img class="logo-header__icon" src="img/logo.png" alt="Логотип в шапке">
+                            <picture><source srcset="img/logo.webp" type="image/webp"><img class="logo-header__icon" src="img/logo.png" alt="Логотип в шапке"></picture>
                         </a>
                         <div class="logo-header__text">Производство и&nbsp;укладка тротуарной плитки в&nbsp;Москве и&nbsp;Московской области</div>
                     </div>
@@ -196,10 +196,9 @@
                         Фильтр
                     </button>
                     <div class="catalog__row">
-                        <aside class="catalog__sidebar sidebar">                            
+                        <aside class="catalog__sidebar sidebar">                                                     
                             <form class="sidebar__filter catalog-filter">
-                                <button class="catalog-filter__close-btn catalog-filter__close-btn--js" type="button">                                    
-                                </button>
+                                <button type="submit" class="catalog-filter__show-item" style="display: inline-block;">Показать</button> 
                                 <fieldset class="catalog-filter__item">
                                     <legend class="catalog-filter__title">
                                         Цена                                            
@@ -362,6 +361,8 @@
                                     </div>
                                     <button type="button" class="catalog-filter__collaps-btn collaps-btn" data-collapsed-enabled="Показать все" data-collapsed-disabled="Свернуть">Показать все</button>    
                                 </fieldset>
+                                <button type="submit" class="catalog-filter__btn catalog-filter__btn--apply">Применить</button>
+                                <button type="reset" class="catalog-filter__btn catalog-filter__btn--reset">Очистить</button>
                             </form>                            
                         </aside>
                         <div class="catalog__body products-catalog">
@@ -577,13 +578,13 @@
                         </ul>
                         <div class="row gy-4  mb-5">
                             <div class="col-xl-4">
-                                <img class="center-img" src="img/catalog/trotuarnaya-plitka-2.jpg" alt="Тротуарная плитка во дворе">
+                                <picture><source srcset="img/catalog/trotuarnaya-plitka-2.webp" type="image/webp"><img class="center-img" src="img/catalog/trotuarnaya-plitka-2.jpg" alt="Тротуарная плитка во дворе"></picture>
                             </div>
                             <div class="col-xl-4">
-                                <img class="center-img" src="img/catalog/trotuarnaya-plitka-1.jpg" alt="Разноцветная тротуарная плитка">
+                                <picture><source srcset="img/catalog/trotuarnaya-plitka-1.webp" type="image/webp"><img class="center-img" src="img/catalog/trotuarnaya-plitka-1.jpg" alt="Разноцветная тротуарная плитка"></picture>
                             </div>
                             <div class="col-xl-4">
-                                <img class="center-img" src="img/catalog/trotuarnaya-plitka-3.jpg" alt="Дорожка из тротуарной плитки во дворе">
+                                <picture><source srcset="img/catalog/trotuarnaya-plitka-3.webp" type="image/webp"><img class="center-img" src="img/catalog/trotuarnaya-plitka-3.jpg" alt="Дорожка из тротуарной плитки во дворе"></picture>
                             </div>
                         </div>
                         <div class="catalog__title">
@@ -616,10 +617,10 @@
                         </ol>
                         <div class="row gy-4 mb-5">
                             <div class="col-md-6">
-                                <img class="center-img" src="img/catalog/trotuarnaya-plitka-4.jpg" alt="Серая тротуарная плитка">
+                                <picture><source srcset="img/catalog/trotuarnaya-plitka-4.webp" type="image/webp"><img class="center-img" src="img/catalog/trotuarnaya-plitka-4.jpg" alt="Серая тротуарная плитка"></picture>
                             </div>
                             <div class="col-md-6">
-                                <img class="center-img" src="img/catalog/trotuarnaya-plitka-5.jpg" alt="Красная тротуарная плитка">
+                                <picture><source srcset="img/catalog/trotuarnaya-plitka-5.webp" type="image/webp"><img class="center-img" src="img/catalog/trotuarnaya-plitka-5.jpg" alt="Красная тротуарная плитка"></picture>
                             </div>
                         </div>
                         <div class="side-border-block">
@@ -683,12 +684,12 @@
                         <div class="row gy-4 mt-5 mb-5">
                             <div class="col-lg-6">
                                 <div class="wide-img" style="height: 100%;">
-                                    <img src="img/catalog/trotuarnaya-plitka-6.jpg" alt="Укладка тротуарной плитки">
+                                    <picture><source srcset="img/catalog/trotuarnaya-plitka-6.webp" type="image/webp"><img src="img/catalog/trotuarnaya-plitka-6.jpg" alt="Укладка тротуарной плитки"></picture>
                                 </div>                                
                             </div>
                             <div class="col-lg-6">
-                                <div class="wide-img mb-4"><img src="img/catalog/trotuarnaya-plitka-7.jpg" alt="Укладка тротуарной плитки на песок"></div>
-                                <div class="wide-img"><img src="img/catalog/trotuarnaya-plitka-8.jpg" alt="Укладка разноцветной тротуарной плитки"></div>                              
+                                <div class="wide-img mb-4"><picture><source srcset="img/catalog/trotuarnaya-plitka-7.webp" type="image/webp"><img src="img/catalog/trotuarnaya-plitka-7.jpg" alt="Укладка тротуарной плитки на песок"></picture></div>
+                                <div class="wide-img"><picture><source srcset="img/catalog/trotuarnaya-plitka-8.webp" type="image/webp"><img src="img/catalog/trotuarnaya-plitka-8.jpg" alt="Укладка разноцветной тротуарной плитки"></picture></div>                              
                                 
                             </div>
                         </div>
@@ -787,11 +788,11 @@
     </div>
 </footer>
 
-<script src="libs/jquery.min.js"></script>
-<script src="libs/fancybox.min.js"></script>
-<script src="libs/swiper-bundle.min.js"></script>
-<script src="libs/ion.rangeSlider.min.js"></script>
-<script src="js/app.js"></script> 
+<script src="libs/jquery.min.js?_v=20220921101423"></script>
+<script src="libs/fancybox.min.js?_v=20220921101423"></script>
+<script src="libs/swiper-bundle.min.js?_v=20220921101423"></script>
+<script src="libs/ion.rangeSlider.min.js?_v=20220921101423"></script>
+<script src="js/app.js?_v=20220921101423"></script> 
         </div>    
     </body>
 </html>
