@@ -565,6 +565,34 @@
                         </div>
                     </div>                    
                 </section>
+                <div class="main-page__form">
+                    <div class="container">
+                    <form class="main-form">
+                        <div class="main-form__content">
+                            <div class="main-form__title">
+                                Получить консультацию
+                            </div>
+                            <div class="main-form__text">
+                                Окажем помощь в&nbsp;подборе цвета и&nbsp;формата плитки, которые подчеркнут красоту вашего загородного дома.
+                            </div>
+                            <div class="main-form__inputs">
+                                <input class="main-form__input" type="text" name="Имя" placeholder="Имя">
+                                <input class="main-form__input" type="tel" name="Телефон" placeholder="+7 (___) ___-__-__">
+                            </div>
+                            <button class="main-form__btn main-btn" type="submit">Cвязаться с нами</button>
+                            <label class="main-form__check custom-checkbox">
+                                <input class="custom-checkbox__input" type="checkbox" checked>
+                                <span class="custom-checkbox__text">Согласие на обработку персональных данных</span>
+                            </label>
+                        </div>
+                        <div class="main-form__img">
+                            <div class="main-form__img-wrap">
+                                <img src="img/main/form-img.jpg" alt="Изображение формы связи">
+                            </div>                            
+                        </div>                        
+                    </form>  
+                    </div>                    
+                </div>
                 <section class="main-page__portfolio portfolio">
                     <div class="container">
                         <div class="portfolio__title main-page__h2">
@@ -994,10 +1022,36 @@
     </div>
 </footer>
 
+<!-- Modals-->
+
+<div class="modal" id="modal-call" style="display: none">
+	<form class="modal-form">
+        <div class="modal-form__title">
+            Заказать звонок
+        </div>
+        <div class="modal-form__text">
+            Заполните форму, и мы вам перезвоним
+        </div>
+        <div class="modal-form__inputs">
+            <input class="modal-form__input" type="text" name="Имя" placeholder="Имя">
+            <input class="modal-form__input" type="tel" name="Телефон" placeholder="+7 (___) ___-__-__">
+        </div>
+        <button class="modal-form__btn main-btn" type="submit">Отправить</button>
+        <label class="modal-form__check custom-checkbox">
+            <input class="custom-checkbox__input custom-checkbox__input--modal" type="checkbox" checked>
+            <span class="custom-checkbox__text">Согласие на обработку персональных данных</span>
+        </label>
+        <div class="modal-form__policy">Нажимая на кнопку "Отправить" вы соглашаетесь с <a href="#">политикой конфиденциальности</a>.</div>
+    </form> 
+</div>
+
+<!-- /Modals -->
+
 <script src="libs/jquery.min.js"></script>
 <script src="libs/fancybox.min.js"></script>
 <script src="libs/swiper-bundle.min.js"></script>
 <script src="libs/ion.rangeSlider.min.js"></script>
+<script src="libs/inputmask.min.js"></script>
 <script src="js/app.js"></script> 
         </div>    
     </body>
