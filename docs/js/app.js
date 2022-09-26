@@ -15,6 +15,20 @@ window.onload = function () {
 		$('.menu-header').removeClass('active');
 		$('body').removeClass('fixed-mb');
 	});
+	// Главный слайдер
+	const swiperTopBanner = new Swiper('.top-banner__slider', {
+		loop: true,
+		slidesPerView: 1,
+		draggable: true,
+		autoplay: {
+			delay: 5000,
+		  },
+
+		pagination: {
+			el: '.top-banner__pagination-js',
+			clickable: true,
+		  },
+	});
 
 	// Слайдер выполненных работ
 	document.querySelectorAll('.portfolio-slide').forEach(n => {

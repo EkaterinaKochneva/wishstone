@@ -8,12 +8,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap&_v=20220921102856" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" href="libs/fancybox.min.css?_v=20220921102856">
-	<link rel="stylesheet" href="libs/swiper-bundle.min.css?_v=20220921102856">
-	<link rel="stylesheet" href="libs/ion.rangeSlider.min.css?_v=20220921102856">
-	<link rel="stylesheet" href="css/style.min.css?_v=20220921102856">
+	<link rel="stylesheet" href="libs/fancybox.min.css">
+	<link rel="stylesheet" href="libs/swiper-bundle.min.css">
+	<link rel="stylesheet" href="libs/ion.rangeSlider.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
 </head>
     <body>
         <div class="wrapper">
@@ -24,7 +24,7 @@
                 <div class="top-header__logo-col">
                     <div class="top-header__logo logo-header">
                         <a class="logo-header__link" href="/">
-                            <picture><source srcset="img/logo.webp" type="image/webp"><img class="logo-header__icon" src="img/logo.png" alt="Логотип в шапке"></picture>
+                            <img class="logo-header__icon" src="img/logo.png" alt="Логотип в шапке">
                         </a>
                         <div class="logo-header__text">Производство и&nbsp;укладка тротуарной плитки в&nbsp;Москве и&nbsp;Московской области</div>
                     </div>
@@ -150,11 +150,104 @@
     </div>
 </header>
             <main class="page main-page">
-                <div class="container">
-                    <div class="main-page__banner">
-                        Тут будет новый супер крутой баннер
-                    </div>                    
-                </div>
+                
+                <div class="main-page__banner top-banner">
+                    <div class="top-banner__slider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="top-banner__slide swiper-slide">                                
+                                <div class="top-banner__item top-banner__item--1">
+                                    <div class="top-banner__img">
+                                        <picture>
+                                            <source type="img/main/banner/slide-1.webp" srcset="img/main/banner/slide-1.webp">
+                                            <img src="img/main/banner/slide-1.jpg" alt="Слайд 1">
+                                        </picture>                                            
+                                    </div>
+                                    <div class="container">
+                                        <div class="top-banner__content">
+                                            <div class="top-banner__mark">
+                                                Скидки
+                                            </div>
+                                            <div class="top-banner__title">
+                                                Вы нам <br>
+                                                <span>мы вам!</span>
+                                            </div>
+                                            <div class="top-banner__subtitle">
+                                                <span>Скидка&nbsp;5%</span> при <br> 100%&nbsp;предоплате
+                                            </div>
+                                            <div class="top-banner__desc">
+                                                Наши менеджеры готовы предоставить Вам&nbsp;отличную скидку при полной оплате оформленного заказа. <span>Заказывайте и&nbsp;экономьте!</span> 
+                                            </div>
+                                            <a class="top-banner__btn main-btn link-modal-js" href="#modal-call">Получить скидку</a>
+                                            <div class="top-banner__bottom-text">*Акция не&nbsp;суммируется с&nbsp;другими скидками и&nbsp;акциями.</div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </div>
+                            <div class="top-banner__slide swiper-slide">
+                                <div class="top-banner__item top-banner__item--2">
+                                    <div class="top-banner__img">
+                                        <picture>
+                                            <source type="img/main/banner/slide-1.webp" srcset="img/main/banner/slide-2.webp">
+                                            <img src="img/main/banner/slide-2.jpg" alt="Слайд 2">
+                                        </picture>                                            
+                                    </div>
+                                    <div class="container">
+                                        <div class="top-banner__content">
+                                            <div class="top-banner__mark">
+                                                Подарок
+                                            </div>
+                                            <div class="top-banner__title">
+                                                Дизайн-проект<br>
+                                                мощения <span>в подарок!</span>
+                                            </div>
+                                            <div class="top-banner__desc-small">
+                                                Наши специалисты предоставят Вам варианты выкладок Вашей брусчатки с&nbsp;визуализацией при оформлении у&nbsp;нас заказа от&nbsp;300&nbsp;м&quot;. 
+                                                <br>
+                                                <br>
+                                                Спешите, количество проектов ограничено!
+                                            </div>
+                                            <a class="top-banner__btn main-btn link-modal-js" href="#modal-call">Получить скидку</a>
+                                            <div class="top-banner__bottom-text">*Акция не&nbsp;суммируется с&nbsp;другими скидками и&nbsp;акциями.</div>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="top-banner__slide swiper-slide">
+                                <div class="top-banner__item top-banner__item--3">
+                                    <div class="top-banner__img">
+                                        <picture>
+                                            <source type="img/main/banner/slide-1.webp" srcset="img/main/banner/slide-3.webp">
+                                            <img src="img/main/banner/slide-3.jpg" alt="Слайд 3">
+                                        </picture>                                            
+                                    </div>
+                                    <div class="container">
+                                        <div class="top-banner__content">
+                                            <div class="top-banner__mark">
+                                                Товар недели
+                                            </div>
+                                            <br>
+                                            <div class="top-banner__title">
+                                                <span>скидка <span>до</span></span>
+                                                10
+                                            </div>
+                                            <div class="top-banner__desc">
+                                                Каждую неделю мы&nbsp;предоставляем <span>скидку до&nbsp;10%</span> на&nbsp;одну из&nbsp;форм тротуарной плитки, которые имеются у&nbsp;нас на&nbsp;производстве.
+                                            </div>
+                                            <div class="top-banner__desc-small">
+                                                Узнать на&nbsp;какую продукцию действует максимальная скидка на&nbsp;этой неделе можно у&nbsp;менеджера.
+                                            </div>
+                                            <a class="top-banner__btn main-btn link-modal-js" href="#modal-call">Получить скидку</a>
+                                            <div class="top-banner__bottom-text">*Акция не&nbsp;суммируется с&nbsp;другими скидками и&nbsp;акциями.</div>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>   
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="slider-pagination swiper-pagination top-banner__pagination-js"></div>  
+                    </div>
+                </div>                    
                 <section class="main-page__intro">
                     <div class="container">
                         <div class="main-page__h1">
@@ -901,11 +994,11 @@
     </div>
 </footer>
 
-<script src="libs/jquery.min.js?_v=20220921102856"></script>
-<script src="libs/fancybox.min.js?_v=20220921102856"></script>
-<script src="libs/swiper-bundle.min.js?_v=20220921102856"></script>
-<script src="libs/ion.rangeSlider.min.js?_v=20220921102856"></script>
-<script src="js/app.js?_v=20220921102856"></script> 
+<script src="libs/jquery.min.js"></script>
+<script src="libs/fancybox.min.js"></script>
+<script src="libs/swiper-bundle.min.js"></script>
+<script src="libs/ion.rangeSlider.min.js"></script>
+<script src="js/app.js"></script> 
         </div>    
     </body>
 </html>
